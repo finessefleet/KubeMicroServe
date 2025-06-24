@@ -5,6 +5,11 @@ echo "Setting up Prometheus..."
 kubectl apply -f ./config/prom-config.yaml
 kubectl apply -f ./config/prom-service.yaml -f ./config/prom-deployment.yaml
 
+echo "Setting up Grafana provisioning ConfigMaps..."
+kubectl apply -f ./config/grafana-datasource.yaml
+kubectl apply -f ./config/grafana-dashboard-provider.yaml
+kubectl apply -f ./config/grafana-dashboard.json.yaml
+
 echo "Setting up Grafana..."
 kubectl apply -f ./config/grafana-service.yaml -f ./config/grafana-deployment.yaml
 
