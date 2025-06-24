@@ -31,7 +31,7 @@ data:
       "panels": [
         {
           "datasource": {
-            "uid": "prometheus"
+            "type": "prometheus"
           },
           "fieldConfig": {
             "defaults": {
@@ -80,7 +80,7 @@ data:
           "targets": [
             {
               "datasource": {
-                "uid": "prometheus"
+                "type": "prometheus"
               },
               "expr": "avg(rate(process_cpu_seconds_total[1m])) * 100",
               "legendFormat": "CPU %",
@@ -88,7 +88,7 @@ data:
             },
             {
               "datasource": {
-                "uid": "prometheus"
+                "type": "prometheus"
               },
               "expr": "process_resident_memory_bytes / 1024 / 1024",
               "legendFormat": "Memory (MB)",
@@ -100,7 +100,7 @@ data:
         },
         {
         "datasource": {
-          "uid": "prometheus"
+          "type": "prometheus"
         },
         "fieldConfig": {
           "defaults": {
@@ -146,7 +146,7 @@ data:
         "targets": [
           {
             "datasource": {
-              "uid": "prometheus"
+              "type": "prometheus"
             },
             "expr": "sum(rate(myapp_http_requests_total[1m]))",
             "legendFormat": "req/s",
@@ -256,7 +256,7 @@ data:
       },
       {
         "datasource": {
-          "uid": "prometheus"
+          "type": "prometheus"
         },
         "fieldConfig": {
           "defaults": {
@@ -302,7 +302,7 @@ data:
         "targets": [
           {
             "datasource": {
-              "uid": "prometheus"
+             "type": "prometheus"
             },
             "expr": "go_goroutines",
             "legendFormat": "{{instance}}",
@@ -391,7 +391,7 @@ data:
         "targets": [
           {
             "datasource": {
-              "uid": "prometheus"
+              "type": "prometheus"
             },
             "editorMode": "code",
             "expr": "sum(rate(myapp_http_requests_total[5m])) by (path)",
