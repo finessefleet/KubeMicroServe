@@ -1,3 +1,5 @@
+# grafana-service.yaml: Exposes Grafana as a Kubernetes Service
+# Allows access to the Grafana UI for monitoring
 apiVersion: v1
 kind: Service
 metadata:

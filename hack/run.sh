@@ -1,4 +1,6 @@
 #!/bin/bash
+# run.sh: Deploys KubeMicroServe to the Kubernetes cluster
+# Usage: ./run.sh
 set -e
 
 NAMESPACE="go-k3-app-ns"

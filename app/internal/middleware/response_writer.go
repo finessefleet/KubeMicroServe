@@ -2,6 +2,9 @@ package middleware
 
 import "net/http"
 
+// response_writer.go: Custom HTTP response writer for KubeMicroServe
+// Used to capture status codes for Prometheus metrics
+
 type responseWriter struct {
 	http.ResponseWriter
 	statusCode int

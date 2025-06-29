@@ -1,3 +1,5 @@
+# grafana-dashboard-provider.yaml: Configures Grafana to load dashboards from a specified location
+# Used to automatically provision dashboards for monitoring
 apiVersion: v1
 kind: ConfigMap
 metadata:

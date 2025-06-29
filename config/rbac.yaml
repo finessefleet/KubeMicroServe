@@ -1,3 +1,5 @@
+# rbac.yaml: Role-based access control for monitoring and app permissions
+# Grants necessary permissions for Prometheus and the app to function securely
 apiVersion: v1
 kind: ServiceAccount
 metadata:

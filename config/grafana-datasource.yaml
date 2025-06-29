@@ -1,3 +1,5 @@
+# grafana-datasource.yaml: Configures Prometheus as a data source for Grafana
+# Enables Grafana to query application metrics
 apiVersion: v1
 kind: ConfigMap
 metadata:

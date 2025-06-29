@@ -1,9 +1,12 @@
+# Makefile: Automation commands for KubeMicroServe
+# Provides targets for building, deploying, cleaning, and monitoring the application
+
 .PHONY: all install build cluster-up clean check-docker-image monitoring monitoring-stop help
 
 # Default target when just running 'make'
 all: check-docker-image
 
-# Check if Docker image exists
+# Check if Docker image exists, build if not
 check-docker-image:
 	@echo "Checking for Docker image go-k3-app:v1.0.0..."
 	@if ! docker image inspect go-k3-app:v1.0.0 >/dev/null 2>&1; then \
@@ -19,7 +22,7 @@ install:
 	@chmod +x ./hack/install.sh
 	@./hack/install.sh
 
-# Build the Docker image
+# Build the Docker image for the app
 build:
 	@echo "Building Docker image..."
 	@chmod +x ./hack/build.sh
@@ -43,13 +46,13 @@ monitoring-stop:
 	@pgrep -f "port-forward svc/prometheus-service" | xargs kill -9 2>/dev/null || echo "No Prometheus port-forward running"
 	@pgrep -f "port-forward svc/grafana-service" | xargs kill -9 2>/dev/null || echo "No Grafana port-forward running"
 
-# Clean up resources
+# Clean up resources from the cluster
 clean:
 	@echo "Cleaning up resources..."
 	@kubectl delete ns go-k3-app-ns --ignore-not-found=true
 	@echo "Resources cleaned up."
 
-# Show help
+# Show help for available targets
 help:
 	@echo "Available targets:"
 	@echo "  make                - Check for Docker image, build if needed, and deploy to cluster"

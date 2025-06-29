@@ -1,3 +1,5 @@
+# deployment.yaml: Kubernetes Deployment for KubeMicroServe
+# Defines how the Go application is deployed, scaled, and monitored in the cluster
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -9,11 +11,11 @@ metadata:
     tier: backend
   annotations:
     description: "Deployment for the go-k3 application"
-    prometheus.io/scrape: "true"
+    prometheus.io/scrape: "true"  # Enable Prometheus scraping
     prometheus.io/port: "8080"
     prometheus.io/path: "/metrics"
 spec:
-  replicas: 3
+  replicas: 3  # Number of application pods
   selector:
     matchLabels:
       app: go-k3-app

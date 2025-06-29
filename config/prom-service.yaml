@@ -1,3 +1,5 @@
+# prom-service.yaml: Exposes Prometheus as a Kubernetes Service
+# Allows access to Prometheus UI and metrics endpoints
 apiVersion: v1
 kind: Service
 metadata:

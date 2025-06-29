@@ -1,4 +1,5 @@
-
+# prom-deployment.yaml: Deploys Prometheus for metrics collection
+# Part of the monitoring stack for KubeMicroServe
 apiVersion: apps/v1
 kind: Deployment
 metadata:

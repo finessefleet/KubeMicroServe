@@ -1,4 +1,6 @@
 #!/bin/bash
+# monitoring.sh: Sets up Prometheus and Grafana monitoring for KubeMicroServe
+# Usage: ./monitoring.sh
 set -e
 
 echo "Setting up Prometheus..."

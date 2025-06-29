@@ -1,3 +1,5 @@
+# prom-config.yaml: Prometheus configuration for scraping metrics
+# Defines scrape targets and settings for monitoring KubeMicroServe
 apiVersion: v1
 kind: ConfigMap
 metadata:

@@ -1,3 +1,5 @@
+# grafana-deployment.yaml: Deploys Grafana for monitoring dashboards
+# Used as part of the monitoring stack for KubeMicroServe
 apiVersion: apps/v1
 kind: Deployment
 metadata:

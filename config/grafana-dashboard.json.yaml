@@ -1,3 +1,5 @@
+# grafana-dashboard.json.yaml: Predefined Grafana dashboard for KubeMicroServe metrics
+# Import this into Grafana for ready-made monitoring panels
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -489,7 +491,7 @@ data:
             "refId": "A"
           }
         ],
-        "title": "90th Percentile Latency",
+        "title": "90th Percentile Latency",
         "type": "timeseries"
       },
       {

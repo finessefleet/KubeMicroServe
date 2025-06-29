@@ -5,6 +5,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 )
 
+// metrics.go: Custom Prometheus metrics for KubeMicroServe
+// Defines and registers application-specific metrics
+
 var (
 	RequestCounter = promauto.NewCounterVec(
 		prometheus.CounterOpts{

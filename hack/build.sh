@@ -1,4 +1,6 @@
 #!/bin/bash
+# build.sh: Builds the Docker image for KubeMicroServe
+# Usage: ./build.sh
 
 cd ./app || exit
 

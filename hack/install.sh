@@ -1,4 +1,6 @@
 #!/bin/bash
+# install.sh: Installs dependencies and sets up the local Kubernetes cluster for KubeMicroServe
+# Usage: ./install.sh
 set -e
 
 echo "📦 Starting K3s + Docker + Go install..."

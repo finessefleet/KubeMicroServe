@@ -1,3 +1,5 @@
+# namespace.yaml: Defines a dedicated Kubernetes namespace for KubeMicroServe
+# Isolates application resources from other workloads
 apiVersion: v1
 kind: Namespace
 metadata:

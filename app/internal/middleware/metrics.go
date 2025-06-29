@@ -4,9 +4,12 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-	
+
 	"basic-server/internal/metrics"
 )
+
+// metrics.go: Middleware for Prometheus metrics collection in KubeMicroServe
+// Wraps HTTP handlers to record request metrics
 
 func Metrics(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {

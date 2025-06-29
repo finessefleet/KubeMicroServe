@@ -1,9 +1,14 @@
+// go.mod: Go module definition for KubeMicroServe
+// Specifies module name, Go version, and dependencies for reproducible builds
 module basic-server
 
+// Minimum Go version required
 go 1.24.1
 
+// Direct dependency for Prometheus metrics
 require github.com/prometheus/client_golang v1.22.0
 
+// Indirect dependencies required by Prometheus and other libraries
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
